@@ -174,7 +174,7 @@ class Header extends React.Component {
                   to="/"
                 >
                   {/* <Icon type="kleaver-banner" /> */}
-                  <img src='/assets/kleaver-banner.png' />
+                  <img src='/assets/img/kleaver-banner.png' />
                   {/* {t('app.header.content')} */}
                 </AppHeaderNavLink>
               </li>
