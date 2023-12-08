@@ -35,7 +35,7 @@ function AppHeader(props) {
         position: sticky;
         width: 100%;
         top: 0;
-        background-color: ${colors.foreground};
+        background-color: ${colors.navbarBackground};
         z-index: ${zIndex.zIndex300};
         height: ${lengths.topBarHeight};
       `}
@@ -169,6 +169,17 @@ class Header extends React.Component {
         <AppHeaderContent>
           <nav>
             <AppHeaderNavList>
+              <li>
+              <AppHeaderNavLink
+                  to="/"
+                >
+                  {/* <Icon type="kleaver-banner" /> */}
+                  <img src='/assets/kleaver-banner.png' />
+                  {/* {t('app.header.content')} */}
+                </AppHeaderNavLink>
+              </li>
+
+
               <li>
                 <AppHeaderNavLink
                   to="/"

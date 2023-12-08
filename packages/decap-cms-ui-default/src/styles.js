@@ -66,7 +66,7 @@ const colors = {
   active: colorsRaw.purple,
   activeBackground: colorsRaw.purpleLight,
   inactive: colorsRaw.gray,
-  button: colorsRaw.grayDark,
+  button: colorsRaw.purple,
   buttonText: colorsRaw.white,
   inputBackground: colorsRaw.white,
   infoText: colorsRaw.blue,
@@ -83,6 +83,7 @@ const colors = {
   checkerboardDark: '#e6e6e6',
   mediaDraftText: colorsRaw.purple,
   mediaDraftBackground: colorsRaw.purpleLight,
+  navbarBackground: colorsRaw.white
 };
 
 const lengths = {
