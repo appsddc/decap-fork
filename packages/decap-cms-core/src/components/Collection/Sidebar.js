@@ -15,7 +15,7 @@ const styles = {
   sidebarNavLinkActive: css`
     color: ${colors.active};
     background-color: ${colors.activeBackground};
-    border-left-color: #4863c6;
+    border-left-color: #9b51e0;
   `,
 };
 
