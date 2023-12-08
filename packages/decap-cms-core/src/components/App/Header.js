@@ -175,7 +175,7 @@ class Header extends React.Component {
                 >
                   {/* <Icon type="kleaver-banner" /> */}
                   <img src='/assets/img/kleaver-banner.png' 
-                    style={{height: 64}}
+                    style={{height: 24}}
                   />
                   {/* {t('app.header.content')} */}
                 </AppHeaderNavLink>
@@ -200,17 +200,20 @@ class Header extends React.Component {
                   </AppHeaderNavLink>
                 </li>
               )}
-              {showMediaButton && (
-                <li>
-                  <AppHeaderButton onClick={openMediaLibrary}>
-                    <Icon type="media-alt" />
-                    {t('app.header.media')}
-                  </AppHeaderButton>
-                </li>
-              )}
+              
             </AppHeaderNavList>
           </nav>
           <AppHeaderActions>
+              {showMediaButton && (
+                <li
+                  style={{listStyle: 'none'}}
+                >
+                  <AppHeaderButton onClick={openMediaLibrary}>
+                    <Icon type="media-alt" />
+                    {/* {t('app.header.media')} */}
+                  </AppHeaderButton>
+                </li>
+              )}
             {createableCollections.size > 0 && (
               <Dropdown
                 renderButton={() => (
