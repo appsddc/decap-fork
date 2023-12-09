@@ -188,8 +188,9 @@ class Header extends React.Component {
                   activeClassName="header-link-active"
                   isActive={(match, location) => location.pathname.startsWith('/collections/')}
                 >
-                  <Icon type="page" />
-                  {t('app.header.content')}
+                  <Icon type="grid" />
+                  {/* {t('app.header.content')} */}
+                  Dashboard
                 </AppHeaderNavLink>
               </li>
               {hasWorkflow && (
@@ -217,7 +218,14 @@ class Header extends React.Component {
             {createableCollections.size > 0 && (
               <Dropdown
                 renderButton={() => (
-                  <AppHeaderQuickNewButton> {t('app.header.quickAdd')}</AppHeaderQuickNewButton>
+                  <AppHeaderQuickNewButton> 
+                    {/* {t('app.header.quickAdd')} */}
+                    {/* New */}
+                    <Icon type="add" />
+
+
+
+                  </AppHeaderQuickNewButton>
                 )}
                 dropdownTopOverlap="30px"
                 dropdownWidth="160px"
