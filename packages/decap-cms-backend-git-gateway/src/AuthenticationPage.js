@@ -175,7 +175,7 @@ export default class GitGatewayAuthenticationPage extends React.Component {
                 {errors.identity}
               </a>
             )}
-            t={t}
+            // t={t}
           />
         );
       } else {
@@ -185,7 +185,7 @@ export default class GitGatewayAuthenticationPage extends React.Component {
             siteUrl={config.site_url}
             onLogin={this.handleIdentity}
             renderButtonContent={() => t('auth.loginWithNetlifyIdentity')}
-            t={t}
+            // t={t}
           />
         );
       }
@@ -220,7 +220,7 @@ export default class GitGatewayAuthenticationPage extends React.Component {
             </LoginButton>
           </AuthForm>
         )}
-        t={t}
+        // t={t}
       />
     );
   }
