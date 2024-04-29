@@ -66,6 +66,29 @@ const SidebarNavLink = styled(NavLink)`
   `};
 `;
 
+
+// New styled component for external links
+const SidebarExternalLink = styled.a`
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  align-items: center;
+  padding: 8px 12px;
+  border-left: 2px solid #fff;
+  z-index: -1;
+
+  ${Icon} {
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+
+  // Adapt the &:hover, &:active, etc. styles as needed
+  &:hover,
+  &:active {
+    // Replicate the styles for the active state here
+  }
+`;
+
 export class Sidebar extends React.Component {
   static propTypes = {
     collections: ImmutablePropTypes.map.isRequired,
@@ -78,6 +101,25 @@ export class Sidebar extends React.Component {
 
   renderLink = (collection, filterTerm) => {
     const collectionName = collection.get('name');
+    let iconType;
+
+  // Determine the icon type based on the collection name
+  switch (collectionName) {
+    case 'config':
+      iconType = 'settings';
+      break;
+    case 'portfolio':
+      iconType = 'portfolio';
+      break;
+    case 'advanced':
+      iconType = 'showroom';
+      break;
+    default:
+      iconType = 'page'; // replace 'defaultIcon' with your default icon type
+      break;
+    }
+
+
     if (collection.has('nested')) {
       return (
         <li key={collectionName}>
@@ -96,7 +138,8 @@ export class Sidebar extends React.Component {
           activeClassName="sidebar-active"
           data-testid={collectionName}
         >
-          <Icon type="write" />
+          
+          <Icon type={iconType} />
           {collection.get('label')}
         </SidebarNavLink>
       </li>
@@ -123,7 +166,21 @@ export class Sidebar extends React.Component {
             .toList()
             .filter(collection => collection.get('hide') !== true)
             .map(collection => this.renderLink(collection, filterTerm))}
+
+
         </SidebarNavList>
+
+        <li key={'docs'} style={{ listStyle: 'none' }}>
+          <SidebarExternalLink 
+            href='https://docs.kleaver.ie'
+            target='_blank'
+            rel='noopener noreferrer'
+            data-testid={'docs'}
+          >
+            <Icon type={'page'} />
+            Documentation
+          </SidebarExternalLink>
+        </li>
       </SidebarContainer>
     );
   }

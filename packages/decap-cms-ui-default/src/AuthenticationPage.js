@@ -18,6 +18,7 @@ const StyledAuthenticationPage = styled.section`
 const CustomIconWrapper = styled.span`
   width: 300px;
   height: auto;
+  margin-bottom: 3em;
 `;
 
 const DecapLogoIcon = styled(Icon)`

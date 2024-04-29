@@ -191,7 +191,7 @@ const buttons = {
     line-height: 36px;
     font-weight: 500;
     padding: 0 15px;
-    background-color: ${colorsRaw.gray};
+    background-color: ${colorsRaw.purple};
     color: ${colorsRaw.white};
   `,
   widget: css`

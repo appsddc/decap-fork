@@ -45,6 +45,9 @@ import iconSettings from './settings.svg';
 import iconUser from './user.svg';
 import iconWorkflow from './workflow.svg';
 import iconWrite from './write.svg';
+import iconPortfolio from './icn-portfolio.svg';
+import iconConfig from './icn-settings.svg';
+import iconShowroom from './icn-showroom.svg'
 
 const iconix = iconAdd;
 
@@ -97,6 +100,9 @@ const images = {
   user: iconUser,
   workflow: iconWorkflow,
   write: iconWrite,
+  portfolio: iconPortfolio,
+  config: iconConfig,
+  showroom: iconShowroom
 };
 
 export default images;
